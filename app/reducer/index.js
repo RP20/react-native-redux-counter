@@ -5,10 +5,9 @@ module.exports = (state={}, action) => {
         count: state.count+1
       }
     case 'DECREMENT_COUNTER':
-        return {
-          count: state.count-1
-        }
-        
+      return {
+        count: state.count-1
+      }  
     default:
       return state;
   }
