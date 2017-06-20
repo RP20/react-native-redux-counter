@@ -26,14 +26,16 @@ var Main = React.createClass ({
             {this.props.count}
           </Text>
         </View>
-        <View style={styles.buttonContainer}>
+        <View>
           <TouchableOpacity onPress={this.incrementCounter}>
-            <Text style={styles.countText}>+</Text>
+            <View style={styles.buttonContainer}>
+              <Text style={styles.countText}>+</Text>
+            </View>
           </TouchableOpacity>
-        </View>
-        <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={this.decrementCounter}>
-            <Text style={styles.countText}>-</Text>
+            <View style={styles.buttonContainer}>
+              <Text style={styles.countText}>-</Text>
+            </View>
           </TouchableOpacity>
         </View>
       </View>
@@ -46,28 +48,32 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
+    backgroundColor: '#0D404E'
   },
   countText: {
-    fontSize: 100,
+    fontSize: 60,
     textAlign: 'center',
     color: 'white',
     justifyContent: 'center',
   },
   countContainer: {
+
     flexDirection: 'row',
     justifyContent: 'center',
-    borderRadius: 20,
+    borderRadius: 30,
     width: 300,
-    backgroundColor: 'black',
-    marginBottom: 100,
-    marginTop: 50
+    //backgroundColor: '#FF5A3C',
+    //marginBottom: 50,
+    //marginTop: 50
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    borderRadius: 20,
-    backgroundColor: 'grey',
+    borderRadius: 30,
+    backgroundColor: '#00DA9D',
     width: 300,
+    marginBottom: 20,
+    padding: 5
     //height: 100
   }
 });
